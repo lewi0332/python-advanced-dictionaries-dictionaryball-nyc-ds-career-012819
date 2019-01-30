@@ -139,20 +139,14 @@ def team_colors(name):
             print(game_dict()[i]['colors'])
 
 def team_names(dictionary):
-    temp=[]
-    for i in dictionary:
-        print(i)
-        temp.append(dictionary[i]['team_name'])
-    return temp
+    return [dictionary[i]['team_name'] for i in dictionary]
 
 def player_numbers(name):
-    temp =[]
     for i in game_dict():
         if game_dict()[i]['team_name'] == name:
-            for x in range(len(game_dict()[i]['players'])):
-                temp.append(game_dict()[i]['players'][x]['number'])           
+            temp = [game_dict()[i]['players'][x]['number'] for x in range(len(game_dict()[i]['players']))]           
     return temp
-
+    
 def player_stats(name):
     for i in game_dict():
         for x in range(len(game_dict()[i]['players'])):
