@@ -146,7 +146,12 @@ def team_names(dictionary):
     return temp
 
 def player_numbers():
-    pass
+    temp =[]
+    for i in game_dict():
+        if game_dict()[i]['team_name'] == name:
+            for x in range(len(game_dict()[i]['players'])):
+                temp.append(game_dict()[i]['players'][x]['number'])           
+    return temp
 
 def player_stats():
     pass
