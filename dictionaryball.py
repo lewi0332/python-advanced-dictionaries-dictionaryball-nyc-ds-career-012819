@@ -161,6 +161,26 @@ def player_stats(name):
                 del full_dict['player_name']
                 return full_dict
 
+def big_shoe_rebounds():
+    temp_size = 0
+    
+    temp_player = []
+    
+    for i in game_dict():
+        for x in game_dict()[i]['players']:
+            if x['shoe'] > temp_size:
+                temp_size = x['shoe']
+                temp_player = []
+                temp_player.append((x['player_name'], x['rebounds']))
+            
+            elif x['shoe'] == temp_size:
+                temp_size == x['shoe']
+                temp_player.append(x['player_name'], x['rebounds'])
+            else:
+                pass
+    
+    return temp_player
+
 def good_practices():
   for location, team_stats in game_dict().items():
     # are you ABSOLUTELY SURE what 'location' and 'team_stats' are? use pdb.set_trace() to find out!
