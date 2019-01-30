@@ -121,19 +121,19 @@ game_dictionary = {
 def game_dict():
     return game_dictionary
 
-def num_points_scored():
+def num_points_scored(name):
     for i in game_dict():
         for x in range(len(game_dict()[i]['players'])):
             if game_dict()[i]['players'][x]['player_name'] == name:
                 print(game_dict()[i]['players'][x]['points'])
 
-def shoe_size():
+def shoe_size(name):
     for i in game_dict():
         for x in range(len(game_dict()[i]['players'])):
             if game_dict()[i]['players'][x]['player_name'] == name:
                 print(game_dict()[i]['players'][x]['shoe'])
 
-def team_colors():
+def team_colors(name):
     for i in game_dict():
         if game_dict()[i]['team_name'] == name:
             print(game_dict()[i]['colors'])
@@ -145,7 +145,7 @@ def team_names(dictionary):
         temp.append(dictionary[i]['team_name'])
     return temp
 
-def player_numbers():
+def player_numbers(name):
     temp =[]
     for i in game_dict():
         if game_dict()[i]['team_name'] == name:
