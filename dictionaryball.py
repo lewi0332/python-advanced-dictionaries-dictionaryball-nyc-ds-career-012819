@@ -138,8 +138,12 @@ def team_colors():
         if game_dict()[i]['team_name'] == name:
             print(game_dict()[i]['colors'])
 
-def team_names():
-    pass
+def team_names(dictionary):
+    temp=[]
+    for i in dictionary:
+        print(i)
+        temp.append(dictionary[i]['team_name'])
+    return temp
 
 def player_numbers():
     pass
