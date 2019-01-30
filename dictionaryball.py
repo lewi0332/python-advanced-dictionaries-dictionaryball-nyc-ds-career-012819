@@ -122,7 +122,10 @@ def game_dict():
     return game_dictionary
 
 def num_points_scored():
-    pass
+    for i in game_dict():
+        for x in range(len(game_dict()[i]['players'])):
+            if game_dict()[i]['players'][x]['player_name'] == name:
+                print(game_dict()[i]['players'][x]['points'])
 
 def shoe_size():
     pass
