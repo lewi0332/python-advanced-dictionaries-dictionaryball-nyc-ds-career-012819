@@ -134,7 +134,9 @@ def shoe_size():
                 print(game_dict()[i]['players'][x]['shoe'])
 
 def team_colors():
-    pass
+    for i in game_dict():
+        if game_dict()[i]['team_name'] == name:
+            print(game_dict()[i]['colors'])
 
 def team_names():
     pass
