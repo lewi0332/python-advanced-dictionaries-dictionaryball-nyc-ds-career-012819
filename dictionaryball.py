@@ -153,8 +153,13 @@ def player_numbers():
                 temp.append(game_dict()[i]['players'][x]['number'])           
     return temp
 
-def player_stats():
-    pass
+def player_stats(name):
+    for i in game_dict():
+        for x in range(len(game_dict()[i]['players'])):
+            if game_dict()[i]['players'][x]['player_name'] == name:
+                full_dict = game_dict()[i]['players'][x]
+                del full_dict['player_name']
+                return full_dict
 
 def good_practices():
   for location, team_stats in game_dict().items():
